@@ -1,0 +1,142 @@
+body{
+    margin:0;
+    padding:0;
+    
+}
+
+.container {
+    display: flex;
+    flex-direction: row;   
+    justify-content: space-between;
+}
+
+.subcontainer{
+    display:flex;
+    flex-direction: column;
+}
+
+.subcontainer h3{
+    text-align: center;
+}
+
+
+.create-game-form{
+    background-color: rgb(55, 55, 55);
+    font-size: 25px;
+    padding: 20px;
+    padding-top: 20px;
+    width: 175%;
+    position: relative;
+    right: 10%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin-top: 15%;
+}
+
+.chooseColor {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.black-tile{
+    background-color: black;
+    color: black;
+}
+
+.white-tile{
+    background-color: white;
+    color: white;
+}
+
+.random-tile{
+    background-color: white;
+    color: black;
+}
+
+.color-option{
+    margin-left: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 10%;
+    margin-top: 20px;
+    font-weight: bolder;
+    text-align: center;
+    font-size: 35px;
+    
+}
+
+.tick {
+    font-size: 40px;
+    position: relative;
+    font-weight: bolder;
+    bottom: 90%;
+}
+
+.active{
+    color: rgb(2, 178, 2);
+}
+
+.chooseControls{
+    padding: 5px 40px;
+    margin-left: 10px;
+}
+
+.create-game-button{
+    background-color: rgb(13,87,1);
+    font-size: 20px;
+    height: 30px;
+    width: 188px;
+    padding: 7px;
+    border: 1px solid black;
+    margin-top: 40px;
+    text-align: center;
+    position: relative;
+    left: 38%;
+   cursor: pointer;
+}
+
+.time-constraints{
+    display: flex;  
+    justify-content: center;
+}
+
+.time-constraints input{
+    margin-right: 8px;
+    margin-top: 8px;
+    margin-left: 5px;
+    height: 20px;
+    width: 100px;
+    border-radius: 5%;
+    border: 1px solid black;
+}
+
+.game-code-panel{
+    display: none;
+    font-size: 20px;
+    text-align: center;
+}
+
+.join-game-panel{
+    padding-top:30px ;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.join-game-panel input{
+    width: 200px;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%,0%);
+}
+.error{
+    background-color: rgb(209, 58, 58);
+    text-align: center;
+    border-radius: 10px; 
+}
+input{
+    border-radius: 3px;
+    border: 1px solid black;
+    height: 22px;
+}

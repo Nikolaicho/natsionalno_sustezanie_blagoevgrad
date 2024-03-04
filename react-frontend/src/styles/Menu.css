@@ -1,0 +1,63 @@
+body{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.tab{
+    padding-left: 25px;
+    padding-right: 30px;
+    padding-top:7px;
+    padding-bottom: 7px;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.tab:hover{
+    background-color:rgb(91,85,85)
+}
+
+.logo-container{
+    display: flex;
+    flex-direction: column;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.logo{
+    width: 70px;
+    position: relative;
+    left: 20%;
+    cursor: pointer;
+}
+
+#container-menu {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    background-color: #403d3d;
+    height: 100vh;
+}
+
+a{
+    text-decoration: none;
+    color: rgb(241, 235, 235);
+}
+.placeholder{
+    display: flex;
+}
+.language{
+    display: flex;
+    flex-direction: row;
+}
+.icon{
+    width: 50px;
+    margin-left: 10px;
+}
+.language-menu{
+    
+    align-self: flex-start;
+}
+.icon{
+    align-self: flex-end;
+}

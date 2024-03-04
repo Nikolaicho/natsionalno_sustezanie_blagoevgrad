@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost&display=swap');
+body{
+    margin: 0;
+    padding: 0;
+    background-color:rgba(45, 40, 40, 1);
+    font-family: "Jost";
+    color: rgb(241, 235, 235);
+}
+
+#container {
+    display: flex;
+    flex-direction: row;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#subcontainer{
+    display: flex;
+    flex-direction: row-reverse;
+    position: relative;
+    left: 10%;
+}
+
+#text-container {
+    font-size: 35px;
+    display: flex;
+    flex-direction: column;
+    padding-left: 30px;
+    align-items: center;
+    justify-content: center;
+}
+
+.ImageContainer img{
+    width: 550px;
+}
+
+.close:hover{
+    color: white;
+}
+
+.basic-button{
+    font-size: 35px;
+    border:2px solid black;
+    text-align: center;
+    background-color: rgb(13,87,1);
+    width: 300px;
+    margin:25px;
+    padding-top:10px;
+    padding-bottom:10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    cursor: pointer;
+}
+
+.log-in{
+    background-color:rgb(91,85,85)
+}
+
+.close{
+    font-weight: bolder;
+    font-size: 30px;
+    position: absolute;
+    bottom: 85%;
+    left: 90%;
+    cursor: pointer;
+    color: rgb(211, 207, 207);
+}
+
+.form {
+    background-color:rgb(43, 41, 41);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    padding: 50px;
+}
+  
+.form input{
+    width: 200px;
+}
+  
+.submit-button {
+    margin-top: 15px;
+    font-size: 15px;
+    text-align: center;
+}
+  
+.submit-button button {
+    font-size: 20px;
+    background-color: rgb(74,120,67);
+    border-radius: 5%;
+    height: 45px;
+    width: 250px;
+    font-weight: bold;
+    border: 2px solid black;
+    color:rgb(26, 25, 25)
+}
+  
+.submit-button button:hover{
+    background-color:rgb(46, 82, 40); 
+    color:rgb(0, 0, 0) ;
+    cursor: pointer;
+}
+.label-container{
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+  
+.label-container input{
+    width: 240px;
+    height: 25px;
+}
+.log-in-form h2{
+  text-align: center;
+}

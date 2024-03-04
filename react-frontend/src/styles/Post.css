@@ -1,0 +1,69 @@
+.post-container{
+    display: flex;
+    flex-direction: row;
+    color:white
+}
+.content-container{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%,0%);
+    padding: 50px;
+    overflow: hidden;
+    background-color: rgb(51, 48, 48);
+}
+.title{
+    font-size: 30px;
+    text-align: center;
+}
+.content-container{
+    width:50%;
+} 
+
+.delete-thread{
+    object-fit: scale-down;
+    width: 25px;
+    height: 25px;
+    position: relative;
+    top:35px;
+    padding-left: 10px;
+    cursor: pointer;
+}
+
+.title-container-post{
+    display: flex;
+    flex-direction: row;
+    padding-left: 10px;
+}
+.author{
+   position: relative;
+   bottom: 25px;   
+}
+.delete{
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+}
+
+.comment-content, .title{
+    white-space: pre-line;
+}
+.text-box{
+    height: 30px;
+    width: 100%; /* Allow the textarea to expand horizontally */
+    max-height: 150px; /* Limit the expansion of textarea vertically */
+    resize: vertical; /* Allow vertical resizing only */
+    padding: 10px; /* Add some padding for better appearance */
+    border: 1px solid #ccc; /* Add a border for better visibility */
+    box-sizing: border-box; /* Ensure padding and border are included in the width and height */
+}
+.create-comment-button{
+border-radius: 10px;
+font-size: 16px;
+background-color: rgb(13,87,1); 
+width: 100px;
+color: white;
+font-family: "Jost";
+border:1px solid black;
+margin-left: 90%;
+cursor: pointer;
+}
