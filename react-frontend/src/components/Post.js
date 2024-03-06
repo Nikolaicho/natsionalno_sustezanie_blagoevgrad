@@ -5,7 +5,7 @@ import Menu from './Menu'
 import "../styles/Post.css"
 import Bin from "../chess-pieces/bin.png"
 
-
+const url = "http://localhost:3000"
 function Post(){
     const {id} = useParams();
     const [title,setTitle] = useState()
@@ -15,7 +15,7 @@ function Post(){
 
     function createComment(){
         let comment = document.getElementsByClassName("text-box")[0].value
-        axios.post("/api/create-comment",{
+        axios.post(url + "/api/create-comment",{
             id:id,
             comment:comment,
             token:localStorage.getItem("accessToken")
@@ -27,7 +27,7 @@ function Post(){
     }
 
     function deleteComment(commentID){
-        axios.post("/api/delete-comment",{
+        axios.post(url + "/api/delete-comment",{
             commentID:commentID,
             forumID:id,
             token:localStorage.getItem("accessToken")
@@ -39,7 +39,7 @@ function Post(){
         
     }
     function deleteThread(id){
-        axios.post("/api/delete-thread",{
+        axios.post(url + "/api/delete-thread",{
             id:id,
             token:localStorage.getItem("accessToken")
         })
@@ -96,18 +96,17 @@ function Post(){
             for(let i = 0; i < title.length;i++){
                 newTitle += title[i]
                 if(i % width == 0 && i > 0){
-                    console.log(i)
                     newTitle += "\n" 
                 }
             }
         }
-        console.log(newTitle)
+        
         return newTitle;
     }
 
     useEffect(()=>{
         async function FetchData(){
-            let res = await axios.post("/api/post-info",{id:id})
+            let res = await axios.post(url + "/api/post-info",{id:id})
             if(res == "404"){
                 console.log("qsha")
             }

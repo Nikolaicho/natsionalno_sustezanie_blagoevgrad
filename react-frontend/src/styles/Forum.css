@@ -22,7 +22,6 @@ body{
     display: flex;
     flex-direction: row-reverse;
     justify-content: center;
-    
 }
 .search-bar{
     border-radius: 20px;
@@ -133,12 +132,12 @@ body{
 }
 .text-box{
     height: 30px;
-    width: 250px; /* Allow the textarea to expand horizontally */
-    max-height: 300px; /* Limit the expansion of textarea vertically */
-    resize: vertical; /* Allow vertical resizing only */
-    padding: 10px; /* Add some padding for better appearance */
-    border: 1px solid #ccc; /* Add a border for better visibility */
-    box-sizing: border-box; /* Ensure padding and border are included in the width and height */
+    width: 250px; 
+    max-height: 300px; 
+    resize: vertical; 
+    padding: 10px; 
+    border: 1px solid #ccc; 
+    box-sizing: border-box; 
 }
 .arrow{
     position: relative;

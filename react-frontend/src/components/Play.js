@@ -4,7 +4,7 @@ import Menu from './Menu'
 import axios from "axios"
 import Cookies from 'universal-cookie';
 const cookie = new Cookies();
-
+const url = "http://localhost:3000"
 function triggerError(errorMessage){
     //IT - Invalid time
     //NC - No color
@@ -71,7 +71,7 @@ function createGame(){
    
 
     if(!error){
-        axios.post("/api/create-new-game",{
+        axios.post(url + "/api/create-new-game",{
             //promeni s biskvitka
             color:color,
             token:localStorage.getItem("accessToken"),
@@ -89,7 +89,7 @@ function createGame(){
 
 function joinGame(){
     let code = document.getElementsByClassName("game-code")[0].value
-    axios.post("/api/join-game",{
+    axios.post(url + "/api/join-game",{
         //promeni s biskvitka
         token:localStorage.getItem("accessToken"),
         code:code,

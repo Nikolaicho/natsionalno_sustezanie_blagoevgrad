@@ -2,19 +2,14 @@ import React, { useEffect } from 'react';
 import "../styles/Menu.css"
 import Logo from "../chess-pieces/logo.png";
 import ChessImg from '../chess-pieces/chess.png';
+import { Link } from "react-router-dom";
+import Hamburger from "../chess-pieces/hamburger.png"
 
-
-function openLanguageMenu(){
-  let menu = document.getElementsByClassName("language-menu")[0]
-  console.log(menu.style.display == "none" )
-  if(menu.style.display == "none" || menu.style.display == ""){
-    console.log(menu.style.display)
-    menu.style.display = "flex"
-    console.log(menu.style.display)
-  }
-  if(menu.style.display == "flex" || menu.style.display == ""){
-    menu.style.display = "none"
-  }
+function openHamburgerMenu(){
+  document.getElementsByClassName("mobile-menu")[0].style.display = "block"
+}
+function closeHamburgerMenu(){
+  document.getElementsByClassName("mobile-menu")[0].style.display = "none"
 }
 
 function Menu() {
@@ -23,34 +18,50 @@ function Menu() {
   })
   return (
     <>
+    <div className = 'hamburger' onClick = {openHamburgerMenu}>☰</div>
+    {/*placeholder има същите размери като менюто като това държи менюто фиксирано */}
     <div className = 'placeholder'></div>
+
     <div id = 'container-menu'>
       {localStorage.getItem("accessToken") != undefined &&(
-        <a className='logo-container' href='/play'>
-        <img className ='logo' src = {Logo}/>
-        <img className ='logo' src={ChessImg} />
-        </a>
+        <Link className='logo-container' to ='/play'>
+          <img className ='logo' src = {Logo}/>
+          <img className ='logo' src={ChessImg} />
+        </Link>
       )}
 
       {localStorage.getItem("accessToken") == undefined &&(
-        <a className='logo-container' href='/'>
-        <img className ='logo' src = {Logo}/>
-        <img className ='logo' src={ChessImg} />
-        </a>
+        <Link className='logo-container' to = '/'>
+          <img className = 'logo' src = {Logo} />
+          <img className = 'logo' src = {ChessImg}/>
+        </Link>
       )}
       
-
-      <a href= "/play">
+      <Link to = "/play">
         <div className='tab'>Играй</div>
-      </a>
+      </Link>
       
-      <a href= "/forum">
-        <div className='tab'>Форум</div>
-      </a>
-     
-      
+      <Link to = "/forum">
+        <div className = 'tab'>Форум</div>
+      </Link>
+
       
    </div> 
+   
+   <div className='mobile-menu'>
+    <div className = 'hamburger' onClick = {closeHamburgerMenu}>☰</div>
+        <Link to = "/">
+          <div className = 'tab'>Начало</div>
+        </Link>
+        <Link to = "/play">
+          <div className = 'tab'>Играй</div>
+        </Link>
+      
+        <Link to = "/forum">
+          <div className = 'tab'>Форум</div>
+        </Link>
+        
+    </div>
    </>
   );
 }

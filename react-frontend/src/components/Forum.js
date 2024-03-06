@@ -5,12 +5,12 @@ import Menu from './Menu'
 import { Link } from 'react-router-dom';
 import Comment from "../chess-pieces/comment-icon.png"
 import  Search  from "../chess-pieces/search-loop.png";
-
+const url = "http://localhost:3000"
 function createForumPost(){
     let title = document.getElementsByClassName("title1")[0].value
     let content = document.getElementsByClassName("content")[0].value
     let cat = document.getElementsByClassName("cat-dropdown")[0].value
-    axios.post("/api/create-post",{
+    axios.post(url + "/api/create-post",{
         title:title,
         content:content,
         cat:cat,
@@ -35,7 +35,7 @@ function closePanel(){
 
 async function search(){
     let title = document.getElementsByClassName("search-bar")[0].value
-    let res = await axios.post("/api/post-info",{
+    let res = await axios.post(url + "/api/post-info",{
         title:title
     })
     if(res.data != 404){
@@ -56,7 +56,7 @@ function Forum(){
             let analysis = []
             let other = []
     
-            let res = await axios.get( "/api/last-published")
+            let res = await axios.get( url + "/api/last-published")
     
             for(let i = 0; i < 4; i++){
                 opening.push(

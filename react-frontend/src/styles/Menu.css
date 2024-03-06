@@ -1,7 +1,6 @@
 body{
     margin: 0;
     padding: 0;
-    height: 100%;
 }
 
 .tab{
@@ -37,27 +36,33 @@ body{
     flex-direction: column;
     background-color: #403d3d;
     height: 100vh;
+    align-self: flex-start;
 }
 
 a{
     text-decoration: none;
     color: rgb(241, 235, 235);
 }
-.placeholder{
-    display: flex;
+
+.mobile-menu{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: #403d3d;
+    display: none;
 }
-.language{
-    display: flex;
-    flex-direction: row;
+
+.hamburger{
+    font-size: 40px;
+    padding: 10px;
+    display:  none;
 }
-.icon{
-    width: 50px;
-    margin-left: 10px;
-}
-.language-menu{
+@media (max-width:1000px) {
+    #container-menu{
+        display: none;
+    }
+    .hamburger{
+        display:  block;
+    }
     
-    align-self: flex-start;
-}
-.icon{
-    align-self: flex-end;
 }

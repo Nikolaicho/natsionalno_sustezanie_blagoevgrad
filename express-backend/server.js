@@ -30,24 +30,6 @@ const uuid = require("uuid")
 const path = require('path');
 app.use(express.static(path.join(__dirname, "build")));
 
-app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "build", "index.html"));
-});
-app.get("/forum", (req, res) => {
-    res.sendFile(path.join(__dirname, "build", "index.html"));
-});
-app.get("/play", (req, res) => {
-    res.sendFile(path.join(__dirname, "build", "index.html"));
-});
-app.get("/game", (req, res) => {
-    res.sendFile(path.join(__dirname, "build", "index.html"));
-});
-app.get("/forum", (req, res) => {
-    res.sendFile(path.join(__dirname, "build", "index.html"));
-});
-app.get("/forum/:id", (req, res) => {
-    res.sendFile(path.join(__dirname, "build", "index.html"));
-});
 
 //връзка за WebSocket сървър
 const WebSocket = require('ws');
@@ -265,6 +247,9 @@ app.post('/api/log-in',async(req,res)=>{
             admin:response.admin,
             username:response.username,
         }) 
+    }
+    else{
+        res.send("FL")
     }
     })
 
