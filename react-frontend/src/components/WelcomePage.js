@@ -105,7 +105,7 @@ function WelcomePage() {
     <div id = "container">
       <Menu/>
         <div className = "call-to-action">
-          <img src = {WelcomePicture} />
+          <img  className = "welcome-picture" src = {WelcomePicture} />
 
           <div id = "text-container">
             <div id="welcome-message">
